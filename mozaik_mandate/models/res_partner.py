@@ -99,3 +99,23 @@ class ResPartner(models.Model):
             assemblies = partner._get_assemblies()
             partner.ext_assembly_count = len(assemblies)
             partner.ext_mandate_count = len(assemblies._get_mandates())
+
+    def add_mandate_action(self, name, res_model):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": name,
+            "res_model": res_model,
+            "context": {"default_partner_id": self.id},
+            "view_mode": "form",
+            "target": "new",
+        }
+
+    def add_sta_mandate_action(self):
+        return self.add_mandate_action("Add a state mandate", "sta.mandate")
+
+    def add_int_mandate_action(self):
+        return self.add_mandate_action("Add an internal mandate", "int.mandate")
+
+    def add_ext_mandate_action(self):
+        return self.add_mandate_action("Add an external mandate", "ext.mandate")
