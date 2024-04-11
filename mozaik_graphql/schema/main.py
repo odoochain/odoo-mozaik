@@ -74,11 +74,11 @@ class Query(graphene.ObjectType):
     def resolve_sta_representatives(root, info, limit=None, offset=0):
         return resolve_sta_representatives(info, limit, offset)
 
-    def resolve_int_candidatures(root, info, limit=None, offset=0):
-        return resolve_int_candidatures(info, limit, offset)
+    def resolve_int_candidatures(root, info, limit=None, offset=0, states=None):
+        return resolve_int_candidatures(info, limit, offset, states)
 
-    def resolve_sta_candidatures(root, info, limit=None, offset=0):
-        return resolve_sta_candidatures(info, limit, offset)
+    def resolve_sta_candidatures(root, info, limit=None, offset=0, states=None):
+        return resolve_sta_candidatures(info, limit, offset, states)
 
     def resolve_int_selection_committees(root, info, limit=None, offset=0):
         return resolve_int_selection_committees(info, limit, offset)
