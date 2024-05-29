@@ -465,6 +465,7 @@ msgid "External Mandate"
 msgstr ""
 
 #. module: mozaik_mandate
+#: code:addons/mozaik_mandate/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_mandate.ext_mandate_action
 #: model:ir.model.fields,field_description:mozaik_mandate.field_abstract_assembly__ext_mandate_ids
 #: model:ir.model.fields,field_description:mozaik_mandate.field_int_assembly__ext_mandate_ids
@@ -474,6 +475,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mozaik_mandate.field_res_users__ext_mandate_ids
 #: model:ir.model.fields,field_description:mozaik_mandate.field_sta_assembly__ext_mandate_ids
 #: model:ir.ui.menu,name:mozaik_mandate.ext_mandate_submenu
+#, python-format
 msgid "External Mandates"
 msgstr ""
 
@@ -682,6 +684,7 @@ msgid "Internal Mandate"
 msgstr ""
 
 #. module: mozaik_mandate
+#: code:addons/mozaik_mandate/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_mandate.int_mandate_action
 #: model:ir.model.fields,field_description:mozaik_mandate.field_abstract_assembly__int_mandate_ids
 #: model:ir.model.fields,field_description:mozaik_mandate.field_ext_assembly__int_mandate_ids
@@ -692,6 +695,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mozaik_mandate.field_res_users__int_mandate_ids
 #: model:ir.model.fields,field_description:mozaik_mandate.field_sta_assembly__int_mandate_ids
 #: model:ir.ui.menu,name:mozaik_mandate.int_mandate_submenu
+#, python-format
 msgid "Internal Mandates"
 msgstr ""
 
@@ -1228,6 +1232,7 @@ msgid "State Mandate"
 msgstr ""
 
 #. module: mozaik_mandate
+#: code:addons/mozaik_mandate/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_mandate.sta_mandate_action
 #: model:ir.model.fields,field_description:mozaik_mandate.field_abstract_assembly__sta_mandate_ids
 #: model:ir.model.fields,field_description:mozaik_mandate.field_ext_assembly__sta_mandate_ids
@@ -1238,6 +1243,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mozaik_mandate.field_res_users__sta_mandate_ids
 #: model:ir.model.fields,field_description:mozaik_mandate.field_sta_assembly__sta_mandate_ids
 #: model:ir.ui.menu,name:mozaik_mandate.sta_mandate_submenu
+#, python-format
 msgid "State Mandates"
 msgstr ""
 
