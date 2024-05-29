@@ -110,3 +110,24 @@ class ResPartner(models.Model):
             "view_mode": "form",
             "target": "new",
         }
+
+    def all_mandates_action(self):
+        self.ensure_one()
+        context = {
+            "search_default_partner_id": self.id,
+            "default_partner_id": self.id,
+            "search_default_all": True,
+        }
+        names = {
+            "sta.mandate": _("State Mandates"),
+            "int.mandate": _("Internal Mandates"),
+            "ext.mandate": _("External Mandates"),
+        }
+        mandate_model = self.env.context.get("mandate_model")
+        return {
+            "type": "ir.actions.act_window",
+            "name": names[mandate_model],
+            "res_model": mandate_model,
+            "context": context,
+            "view_mode": "tree,form",
+        }
