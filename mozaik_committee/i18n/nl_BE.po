@@ -569,6 +569,7 @@ msgid "External Candidature"
 msgstr ""
 
 #. module: mozaik_committee
+#: code:addons/mozaik_committee/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_committee.ext_candidature_action
 #: model:ir.model.fields,field_description:mozaik_committee.field_abstract_assembly__ext_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_ext_assembly__ext_candidature_ids
@@ -578,6 +579,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mozaik_committee.field_res_users__ext_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_assembly__ext_candidature_ids
 #: model:ir.ui.menu,name:mozaik_committee.ext_candidature_submenu
+#, python-format
 msgid "External Candidatures"
 msgstr ""
 
@@ -779,6 +781,7 @@ msgid "Internal Candidature"
 msgstr ""
 
 #. module: mozaik_committee
+#: code:addons/mozaik_committee/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_committee.int_candidature_action
 #: model:ir.model.fields,field_description:mozaik_committee.field_abstract_assembly__int_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_ext_assembly__int_candidature_ids
@@ -788,6 +791,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mozaik_committee.field_res_users__int_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_assembly__int_candidature_ids
 #: model:ir.ui.menu,name:mozaik_committee.int_candidature_submenu
+#, python-format
 msgid "Internal Candidatures"
 msgstr ""
 
@@ -1411,6 +1415,7 @@ msgid "State Candidature"
 msgstr ""
 
 #. module: mozaik_committee
+#: code:addons/mozaik_committee/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_committee.sta_candidature_action
 #: model:ir.model.fields,field_description:mozaik_committee.field_abstract_assembly__sta_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_ext_assembly__sta_candidature_ids
@@ -1421,6 +1426,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_assembly__sta_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_selection_committee__candidature_ids
 #: model:ir.ui.menu,name:mozaik_committee.sta_candidature_submenu
+#, python-format
 msgid "State Candidatures"
 msgstr ""
 
