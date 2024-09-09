@@ -1,7 +1,7 @@
 # Copyright 2018 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import fields, models
+from odoo import _, fields, models
 
 
 class ResPartner(models.Model):
@@ -44,3 +44,24 @@ class ResPartner(models.Model):
         string="External Candidatures (Inactive)",
         domain=[("active", "=", False)],
     )
+
+    def all_candidatures_action(self):
+        self.ensure_one()
+        context = {
+            "search_default_partner_id": self.id,
+            "default_partner_id": self.id,
+            "search_default_all": True,
+        }
+        names = {
+            "sta.candidature": _("State Candidatures"),
+            "int.candidature": _("Internal Candidatures"),
+            "ext.candidature": _("External Candidatures"),
+        }
+        candidature_model = self.env.context.get("candidature_model")
+        return {
+            "type": "ir.actions.act_window",
+            "name": names[candidature_model],
+            "res_model": candidature_model,
+            "context": context,
+            "view_mode": "tree,form",
+        }
