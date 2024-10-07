@@ -14,7 +14,7 @@ from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT, mute_logger
 class TestPartnerInvolvement(SavepointCase):
     def setUp(self):
         super().setUp()
-        self.paul = self.browse_ref("mozaik_involvement.res_partner_bocuse")
+        self.paul = self.env["res.partner"].create({"name": "Paul Bocuse"})
         self.ic_1 = self.browse_ref(
             "mozaik_involvement.partner_involvement_category_demo_1"
         )
@@ -49,7 +49,6 @@ class TestPartnerInvolvement(SavepointCase):
             }
         )
         self.assertIn(cat.interest_ids, paul.interest_ids)
-        return
 
     def test_multi(self):
         """
@@ -99,11 +98,10 @@ class TestPartnerInvolvement(SavepointCase):
                 }
             )
             test_creation.flush()
-        return
 
     def test_onchange_type(self):
         """
-        Check for allow_multiple when changing involvment type
+        Check for allow_multiple when changing involvement type
         """
         # create an involvement category
         cat = self.env["partner.involvement.category"].new(
@@ -112,15 +110,12 @@ class TestPartnerInvolvement(SavepointCase):
                 "res_users_ids": [(4, self.env.ref("base.user_admin").id)],
             }
         )
-        # Change type to donation
-        cat.involvement_type = "donation"
-        cat._onchange_involvement_type()
-        self.assertTrue(cat.allow_multi)
+        # Set allow_multi = True
+        cat.allow_multi = True
         # Change type to another type
         cat.involvement_type = "voluntary"
         cat._onchange_involvement_type()
         self.assertFalse(cat.allow_multi)
-        return
 
     def test_security(self):
         """

@@ -40,6 +40,7 @@ class Partner(AbstractObject):
     is_deceased = graphene.Boolean()
     membership_card_sent = graphene.Boolean()
     membership_card_sent_date = graphene.Date()
+    introduction = graphene.String()
 
     def resolve_membership_state(root, info):
         return root.membership_state_id or None

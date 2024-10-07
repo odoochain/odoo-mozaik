@@ -4,7 +4,7 @@
     "name": "Mozaik: Involvement",
     "summary": """
         Manage involvements (and all kind of segmentation) on partners""",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV",
     "website": "https://github.com/mozaik-association/mozaik",
@@ -28,7 +28,7 @@
     ],
     "demo": [
         "demo/partner_involvement_category.xml",
-        "demo/res_partner.xml",
     ],
+    "external_dependencies": {"python": ["openupgradelib"]},
     "installable": True,
 }

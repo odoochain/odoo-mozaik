@@ -63,12 +63,10 @@
                     <button
                         class="oe_right"
                         string="All Details"
-                        name="%(sta_mandate_action)d"
-                        type="action"
+                        name="all_mandates_action"
+                        type="object"
                         attrs="{'invisible': [('id','=',False)]}"
-                        context="{'search_default_partner_id': active_id,
-                                              'default_partner_id': active_id,
-                                              'search_default_all': True}"
+                        context="{'mandate_model': 'sta.mandate'}"
                     />
                     <div style="height:10px" />
                     <button
@@ -109,12 +107,10 @@
                     <button
                         class="oe_right"
                         string="All Details"
-                        name="%(int_mandate_action)d"
-                        type="action"
+                        name="all_mandates_action"
+                        type="object"
                         attrs="{'invisible': [('id','=',False)]}"
-                        context="{'search_default_partner_id': active_id,
-                                              'default_partner_id': active_id,
-                                              'search_default_all': True}"
+                        context="{'mandate_model': 'int.mandate'}"
                     />
                     <div style="height:10px" />
                     <button
@@ -155,12 +151,10 @@
                     <button
                         class="oe_right"
                         string="All Details"
-                        name="%(ext_mandate_action)d"
-                        type="action"
+                        name="all_mandates_action"
+                        type="object"
                         attrs="{'invisible': [('id','=',False)]}"
-                        context="{'search_default_partner_id': active_id,
-                                              'default_partner_id': active_id,
-                                              'search_default_all': True}"
+                        context="{'mandate_model': 'ext.mandate'}"
                     />
                     <div style="height:10px" />
                     <button

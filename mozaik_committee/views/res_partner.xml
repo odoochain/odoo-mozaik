@@ -15,12 +15,10 @@
                 <button
                     class="oe_right"
                     string="All Details"
-                    name="%(sta_candidature_action)d"
-                    type="action"
+                    name="all_candidatures_action"
+                    type="object"
                     attrs="{'invisible': [('id','=',False)]}"
-                    context="{'search_default_partner_id': active_id,
-                                            'default_partner_id': active_id,
-                                            'search_default_all': True}"
+                    context="{'candidature_model': 'sta.candidature'}"
                 />
                 <field
                     name="sta_candidature_ids"
@@ -54,12 +52,10 @@
                 <button
                     class="oe_right"
                     string="All Details"
-                    name="%(int_candidature_action)d"
-                    type="action"
+                    name="all_candidatures_action"
+                    type="object"
                     attrs="{'invisible': [('id','=',False)]}"
-                    context="{'search_default_partner_id': active_id,
-                                            'default_partner_id': active_id,
-                                            'search_default_all': True}"
+                    context="{'candidature_model': 'int.candidature'}"
                 />
                 <field
                     name="int_candidature_ids"
@@ -91,12 +87,10 @@
                 <button
                     class="oe_right"
                     string="All Details"
-                    name="%(ext_candidature_action)d"
-                    type="action"
+                    name="all_candidatures_action"
+                    type="object"
                     attrs="{'invisible': [('id','=',False)]}"
-                    context="{'search_default_partner_id': active_id,
-                                            'default_partner_id': active_id,
-                                            'search_default_all': True}"
+                    context="{'candidature_model': 'ext.candidature'}"
                 />
                 <field
                     name="ext_candidature_ids"

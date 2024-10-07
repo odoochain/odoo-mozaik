@@ -36,11 +36,14 @@ int_candidatures = graphene.List(
     description="All internal candidatures",
     limit=graphene.Int(),
     offset=graphene.Int(),
+    states=graphene.List(graphene.String),
 )
 
 
-def resolve_int_candidatures(info, limit=None, offset=0):
+def resolve_int_candidatures(info, limit=None, offset=0, states=None):
     domain = []
+    if states:
+        domain.append(("state", "in", states))
     res = info.context["env"]["int.candidature"].search(
         domain, limit=limit, offset=offset
     )
@@ -62,11 +65,14 @@ sta_candidatures = graphene.List(
     description="All state candidatures",
     limit=graphene.Int(),
     offset=graphene.Int(),
+    states=graphene.List(graphene.String),
 )
 
 
-def resolve_sta_candidatures(info, limit=None, offset=0):
+def resolve_sta_candidatures(info, limit=None, offset=0, states=None):
     domain = []
+    if states:
+        domain.append(("state", "in", states))
     res = info.context["env"]["sta.candidature"].search(
         domain, limit=limit, offset=offset
     )

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-01-24 12:56+0000\n"
+"PO-Revision-Date: 2023-12-18 14:52+0000\n"
 "Last-Translator: Guillaume Vandamme <guillaume.vandamme@acsone.eu>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -584,6 +584,7 @@ msgid "External Candidature"
 msgstr "Candidature externe"
 
 #. module: mozaik_committee
+#: code:addons/mozaik_committee/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_committee.ext_candidature_action
 #: model:ir.model.fields,field_description:mozaik_committee.field_abstract_assembly__ext_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_ext_assembly__ext_candidature_ids
@@ -593,6 +594,7 @@ msgstr "Candidature externe"
 #: model:ir.model.fields,field_description:mozaik_committee.field_res_users__ext_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_assembly__ext_candidature_ids
 #: model:ir.ui.menu,name:mozaik_committee.ext_candidature_submenu
+#, python-format
 msgid "External Candidatures"
 msgstr "Candidatures externes"
 
@@ -794,6 +796,7 @@ msgid "Internal Candidature"
 msgstr "Candidature interne"
 
 #. module: mozaik_committee
+#: code:addons/mozaik_committee/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_committee.int_candidature_action
 #: model:ir.model.fields,field_description:mozaik_committee.field_abstract_assembly__int_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_ext_assembly__int_candidature_ids
@@ -803,6 +806,7 @@ msgstr "Candidature interne"
 #: model:ir.model.fields,field_description:mozaik_committee.field_res_users__int_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_assembly__int_candidature_ids
 #: model:ir.ui.menu,name:mozaik_committee.int_candidature_submenu
+#, python-format
 msgid "Internal Candidatures"
 msgstr "Candidatures internes"
 
@@ -1426,6 +1430,7 @@ msgid "State Candidature"
 msgstr "Candidature politique"
 
 #. module: mozaik_committee
+#: code:addons/mozaik_committee/models/res_partner.py:0
 #: model:ir.actions.act_window,name:mozaik_committee.sta_candidature_action
 #: model:ir.model.fields,field_description:mozaik_committee.field_abstract_assembly__sta_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_ext_assembly__sta_candidature_ids
@@ -1436,6 +1441,7 @@ msgstr "Candidature politique"
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_assembly__sta_candidature_ids
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_selection_committee__candidature_ids
 #: model:ir.ui.menu,name:mozaik_committee.sta_candidature_submenu
+#, python-format
 msgid "State Candidatures"
 msgstr "Candidatures politiques"
 
@@ -1482,17 +1488,17 @@ msgstr "Statut"
 #. module: mozaik_committee
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_candidature__is_substitute
 msgid "Substitute"
-msgstr "Substitut"
+msgstr "Suppléant"
 
 #. module: mozaik_committee
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_candidature__election_substitute_position
 msgid "Substitute Position after Election"
-msgstr "Position 'Substitut' après élection"
+msgstr "Position 'Suppléant' après élection"
 
 #. module: mozaik_committee
 #: model:ir.model.fields,field_description:mozaik_committee.field_sta_candidature__substitute_votes
 msgid "Substitute Preferential Votes"
-msgstr "Substitut votes de préférence"
+msgstr "Suppléant votes de préférence"
 
 #. module: mozaik_committee
 #: model:ir.model.constraint,message:mozaik_committee.constraint_abstract_selection_committee_date_check
