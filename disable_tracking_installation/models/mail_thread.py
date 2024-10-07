@@ -28,7 +28,6 @@ class MailThread(models.AbstractModel):
         self_ctx = self._get_context_tracking()
         return super(MailThread, self_ctx).create(vals)
 
-    @api.multi
     def write(self, vals):
         """
         Disable tracking if possible: when testing, installing, migrating, ...

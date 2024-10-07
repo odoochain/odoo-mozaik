@@ -13,7 +13,7 @@
         "base",
         "mail",
         "contacts",
-        "base_address_city",
+        # "base_address_city",
         "mozaik_tools",
         "mozaik_abstract_model",
     ],
